@@ -1,5 +1,5 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Login from "./components/login/login";
+import Login from "./pages/login/login";
 
 
 

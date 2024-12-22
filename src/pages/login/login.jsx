@@ -1,9 +1,11 @@
-import grayLogo from "../../assets/gray-logo.svg";
+import grayLogo from "../../assets/gray_logo.svg";
+import HeroSection from "../../components/HeroSection/HeroSection";
 
 function Login() {
 	return (
 		<div className="flex h-screen">
 			<div className="flex-1 border-r-2 flex items-center justify-center">
+				<HeroSection />
 				<div className="absolute bottom-4 left-4">
 					{" "}
 					<img
