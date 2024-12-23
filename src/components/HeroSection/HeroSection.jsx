@@ -39,9 +39,11 @@ export default function HeroSection() {
 			<div className="bg-white rounded-lg shadow-all-sides mb-6 divide-y divide-gray-300">
 				<div className="flex items-center gap-2 mb-4 pt-6 px-6 pb-3">
 					<img src={antLogo} alt="Ant Logo" className="w-6 h-6 " />
-					<span className="text-xl text-[#081735] font-bold">AI to Detect & Autofix Bad Code</span>
+					<span className="text-xl text-[#081735] font-bold">
+						AI to Detect & Autofix Bad Code
+					</span>
 				</div>
-				<div className="flex justify-around gap-8  pt-3 px-6 pb-6">
+				<div className="flex justify-around gap-8 pt-3 px-6 pb-6">
 					<div className="flex justify-center">
 						<div className="font-semibold text-center">
 							30+

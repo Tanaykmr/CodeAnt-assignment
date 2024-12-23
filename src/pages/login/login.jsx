@@ -1,5 +1,6 @@
 import grayLogo from "../../assets/gray_logo.svg";
 import HeroSection from "../../components/HeroSection/HeroSection";
+import LoginSection from "../../components/LoginSection/LoginSection";
 
 function Login() {
 	return (
@@ -15,7 +16,12 @@ function Login() {
 					/>
 				</div>
 			</div>
-			<div className="flex-1  flex items-center justify-center">hello</div>
+			<div className="flex-1 flex flex-col items-center justify-center gap-6">
+				<LoginSection />
+				<span className="text-[#081735]">
+					By signing up you agree to the <strong>Privacy Policy</strong>.
+				</span>
+			</div>
 		</div>
 	);
 }
