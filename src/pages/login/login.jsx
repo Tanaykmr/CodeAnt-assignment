@@ -2,7 +2,7 @@ import grayLogo from "../../assets/gray_logo.svg";
 import HeroSection from "../../components/HeroSection/HeroSection";
 import LoginSection from "../../components/LoginSection/LoginSection";
 
-function Login() {
+export default function Login() {
 	return (
 		<div className="flex h-screen">
 			<div className="flex-1 border-r-2 flex items-center justify-center">
@@ -25,5 +25,3 @@ function Login() {
 		</div>
 	);
 }
-
-export default Login;
