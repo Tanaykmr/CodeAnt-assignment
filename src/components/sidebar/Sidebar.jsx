@@ -1,4 +1,5 @@
 import { GoChevronDown } from 'react-icons/go';
+import { useNavigate } from 'react-router-dom';
 import call from '../../assets/call.svg';
 import cloud from '../../assets/cloud.svg';
 import code from '../../assets/code.svg';
@@ -7,7 +8,6 @@ import home from '../../assets/home.svg';
 import logout from '../../assets/logout.svg';
 import nameLogo from '../../assets/name_logo.svg';
 import settings from '../../assets/settings.svg';
-import { useNavigate } from 'react-router-dom';
 
 export default function Sidebar() {
   const navigate = useNavigate();
