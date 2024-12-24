@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import grayLogo from '../../assets/gray_logo.svg';
 import HeroSection from '../../components/HeroSection/HeroSection';
 import LoginSection from '../../components/LoginSection/LoginSection';
 
 export default function Login() {
+  const navigate = useNavigate();
   return (
     <div className="flex h-screen">
       <div className="flex flex-1 items-center justify-center border-r-2">
@@ -18,7 +20,8 @@ export default function Login() {
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-6">
         <LoginSection />
-        <span className="text-[#081735]">
+        <span className="text-[#081735]" onClick={() => navigate('/dashboard')}>
+          {' '}
           By signing up you agree to the <strong>Privacy Policy</strong>.
         </span>
       </div>
