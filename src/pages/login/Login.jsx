@@ -20,7 +20,7 @@ export default function Login() {
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-6">
         <LoginSection />
-        <span className="text-[#081735]" onClick={() => navigate('/dashboard')}>
+        <span className="text-[#081735]">
           {' '}
           By signing up you agree to the <strong>Privacy Policy</strong>.
         </span>
