@@ -1,92 +1,50 @@
-import {GoChevronDown} from "react-icons/go";
-import call from "../../assets/call.svg";
-import cloud from "../../assets/cloud.svg";
-import code from "../../assets/code.svg";
-import docs from "../../assets/docs.svg";
-import home from "../../assets/home.svg";
-import logout from "../../assets/logout.svg";
-import nameLogo from "../../assets/name_logo.svg";
-import settings from "../../assets/settings.svg";
+import Sidebar from '../../components/Sidebar/Sidebar';
+import home from '../../assets/home.svg';
 
 export default function Dashboard() {
-	return (
-		// mother div
-		<div className="flex flex-1 h-screen">
-			{/* <div className="flex flex-1"> */}
-			{/* the div below is the sidebar */}
-			<div className="w-60 p-4 flex flex-col gap-3">
-				<img src={nameLogo} className="mb-4" />
-				{/* the below div contains all the name and buttons */}
-				<div className="flex flex-col h-full">
-					{/* Top group that stays together */}
-					<div className="space-y-2">
-						<div className="rounded-lg border p-2 flex justify-between items-center px-3">
-							<span className="truncate max-w-[140px]">
-								UtkarshDhairyaPanwar
-							</span>
-							<GoChevronDown className="w-6 h-6 ml-2" />
-						</div>
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={home}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>Repositories</span>
-						</button>
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={code}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>AI Code Review </span>
-						</button>
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={cloud}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>Cloud Security</span>
-						</button>
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={docs}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>How to Use</span>
-						</button>
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={settings}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>Settings</span>
-						</button>
-					</div>
+  const value = 33;
+  return (
+    // mother div
+    <div className="flex h-screen flex-1">
+      <div className="flex w-60 flex-col gap-3 p-4">
+        <Sidebar />
+      </div>
 
-					{/* Bottom element with auto margin to push it down */}
-					<div className="mt-auto">
-						{" "}
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={call}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>Support</span>
-						</button>{" "}
-						<button className="rounded-lg p-2 w-full flex items-center gap-2 hover:shadow-inner hover:bg-[#1570EF] hover:text-white group">
-							<img
-								src={logout}
-								className="w-6 h-6 group-hover:brightness-0 group-hover:invert"
-							/>
-							<span>Logout</span>
-						</button>
-					</div>
-				</div>
-			</div>
-
-			{/* the below div is the main app */}
-			<div className="bg-[#FAFAFA] p-4 flex-1">main app</div>
-			{/* </div> */}
-		</div>
-	);
+      <div className="h-full flex-1 overflow-hidden bg-red-600 p-4">
+        <div className="flex h-full flex-col gap-4 overflow-y-auto bg-white py-4">
+          {/* the div below is the top div, containing the heading */}
+          <div className="flex justify-between px-4">
+            <div className="flex flex-col items-center justify-center p-2">
+              <span className="text-2xl font-bold text-[#181D27]">
+                Repositories
+              </span>
+              <span className="text-414651 text-sm">
+                {value} total repositories
+              </span>
+            </div>
+            <div className="flex">
+              <button className="group flex w-full items-center gap-2 rounded-lg p-2 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={home}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Repositories</span>
+              </button>{' '}
+              <button className="group flex w-full items-center gap-2 rounded-lg p-2 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={home}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Repositories</span>
+              </button>{' '}
+            </div>
+          </div>
+          <div>search box</div>
+          <div>repoList</div>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+// [#FAFAFA]
