@@ -18,15 +18,15 @@ export default function MainApp() {
           </div>
 
           <div className="mt-3 flex gap-3">
-            <button className="group flex items-center gap-2 rounded-lg border bg-white px-4 shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+            <button className="group flex min-h-[44px] touch-manipulation items-center gap-2 rounded-lg border bg-white px-4 py-2 shadow-md transition-all duration-200 active:translate-y-0.5 active:shadow-sm [@media(hover:hover)]:hover:-translate-y-0.5 [@media(hover:hover)]:hover:shadow-lg">
               <img
                 src={refresh}
-                className="h-4 w-4 transition-transform duration-500 group-hover:rotate-180"
+                className="h-4 w-4 transition-transform duration-300 [@media(hover:hover)]:group-hover:rotate-180"
               />
               <span>Refresh All</span>
             </button>
 
-            <button className="group flex items-center gap-2 rounded-lg bg-[#1570EF] px-4 py-1 text-white shadow-inner transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+            <button className="group flex touch-manipulation items-center gap-2 rounded-lg bg-[#1570EF] px-4 py-1 text-white shadow-inner transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-sm">
               <img src={plus} className="h-4 w-4 brightness-0 invert" />
               <span>Add Repository</span>
             </button>
@@ -55,7 +55,7 @@ export default function MainApp() {
         {repoList.map((repo) => (
           <div
             key={repo.name}
-            className="flex snap-end items-center overflow-x-auto pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
+            className="flex snap-end items-center overflow-auto pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
           >
             <RepoCard {...repo} />
           </div>

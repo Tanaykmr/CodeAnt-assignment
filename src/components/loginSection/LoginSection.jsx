@@ -48,28 +48,28 @@ export default function LoginSection() {
         {mode === 'SAAS' ? (
           <>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={github} className="h-6 w-6" />
               <span>Sign in with Github</span>
             </button>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={bitbucket} className="h-6 w-6" />
               <span>Sign in with BitBucket</span>
             </button>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={azure} className="h-6 w-6" />
               <span>Sign in with Azure Devops</span>
             </button>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={gitlab} className="h-6 w-6" />
@@ -79,14 +79,14 @@ export default function LoginSection() {
         ) : (
           <>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={gitlab} className="h-6 w-6" />
               <span>Self Hosted GitLab</span>
             </button>
             <button
-              className="flex w-full items-center justify-center gap-2 rounded-lg border px-10 py-4 duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[300px] md:w-[400px] lg:w-[500px]"
+              className="flex w-full touch-manipulation items-center justify-center gap-2 rounded-lg border px-10 py-4 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0.5 active:shadow-sm sm:w-[300px] md:w-[400px] lg:w-[500px]"
               onClick={() => navigate('/dashboard')}
             >
               <img src={sso} className="h-6 w-6" />
