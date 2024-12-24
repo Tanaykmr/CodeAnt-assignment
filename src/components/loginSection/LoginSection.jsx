@@ -95,40 +95,6 @@ export default function LoginSection() {
           </>
         )}
       </div>
-
-      {/* <div className="flex flex-wrap gap-4">
-        {mode === 'SAAS' ? (
-          <div className="flex flex-col gap-4">
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={github} className="h-6 w-6" />
-              <span>Sign in with Github</span>
-            </button>
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={bitbucket} className="h-6 w-6" />
-              <span>Sign in with BitBucket</span>
-            </button>
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={azure} className="h-6 w-6" />
-              <span>Sign in with Azure Devops</span>
-            </button>
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={gitlab} className="h-6 w-6" />
-              <span>Sign in with GitLab</span>
-            </button>
-          </div>
-        ) : (
-          <div className="flex flex-col gap-4">
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={gitlab} className="h-6 w-6" />
-              <span>Self Hosted GitLab</span>
-            </button>
-            <button className="flex h-16 w-[500px] items-center justify-center gap-2 rounded-lg border px-10 transition-all duration-300 hover:bg-gray-50">
-              <img src={sso} className="h-6 w-6" />
-              <span>Sign in with SSO</span>
-            </button>
-          </div>
-        )}
-      </div> */}
     </div>
   );
 }

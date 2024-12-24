@@ -12,7 +12,6 @@ import { useNavigate } from 'react-router-dom';
 export default function Sidebar() {
   const navigate = useNavigate();
   return (
-    // todo: make each button raise a bit on hover
     <>
       <img src={nameLogo} className="mb-4" onClick={() => navigate('/login')} />
       <div className="flex h-full flex-col">
