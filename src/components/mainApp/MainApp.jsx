@@ -8,7 +8,7 @@ export default function MainApp() {
   const value = repoList.length;
   return (
     <div className="flex flex-col divide-y divide-gray-300 border bg-white lg:rounded-lg">
-      <div className="sticky top-0  bg-white space-y-4 p-4">
+      <div className="flex flex-col gap-3 bg-white p-4 lg:rounded-lg">
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <div>
             <h2 className="text-3xl font-bold text-[#181D27]">Repositories</h2>
@@ -18,7 +18,7 @@ export default function MainApp() {
           </div>
 
           <div className="mt-3 flex gap-3">
-            <button className="group flex items-center gap-2 rounded-lg border px-4 shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
+            <button className="group flex items-center gap-2 rounded-lg border bg-white px-4 shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg">
               <img
                 src={refresh}
                 className="h-4 w-4 transition-transform duration-500 group-hover:rotate-180"
@@ -32,8 +32,8 @@ export default function MainApp() {
             </button>
           </div>
         </div>
-        
-        <div className="relative min-w-[30%] lg:w-[30%]">
+
+        <div id="123" className="relative min-w-[30%] lg:w-[30%]">
           <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
             <img
               src={search}
