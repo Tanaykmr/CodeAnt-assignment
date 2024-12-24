@@ -10,7 +10,7 @@ function App() {
     },
     {
       path: '/',
-      element: <Dashboard />,
+      element: <Login />,
     },
     {
       path: '/dashboard',
