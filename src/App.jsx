@@ -7,7 +7,7 @@ function App() {
     {
       path: '/login',
       element: <Login />,
-    },r
+    },
     {
       path: '/',
       element: <Dashboard />,
