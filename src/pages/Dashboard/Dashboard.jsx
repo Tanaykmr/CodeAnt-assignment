@@ -2,8 +2,8 @@ import { repoList } from '../../../repoList';
 import plus from '../../assets/plus.svg';
 import refresh from '../../assets/refresh.svg';
 import search from '../../assets/search.svg';
-import Sidebar from '../../components/Sidebar/Sidebar';
 import size from '../../assets/size.svg';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 export default function Dashboard() {
   const value = 33;
