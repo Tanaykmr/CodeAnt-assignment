@@ -1,13 +1,13 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Dashboard from './pages/Dashboard/Dashboard';
-import Login from './pages/Login/Login';
+import Dashboard from './pages/Dashboard/Dashboard.jsx';
+import Login from './pages/Login/Login.jsx';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/login',
       element: <Login />,
-    },
+    },r
     {
       path: '/',
       element: <Dashboard />,
