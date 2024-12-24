@@ -1,10 +1,8 @@
-import { useNavigate } from 'react-router-dom';
 import grayLogo from '../../assets/gray_logo.svg';
 import HeroSection from '../../components/heroSection/HeroSection';
 import LoginSection from '../../components/loginSection/LoginSection';
 
 export default function Login() {
-  const navigate = useNavigate();
   return (
     <div className="flex h-screen">
       <div className="flex flex-1 items-center justify-center border-r-2">

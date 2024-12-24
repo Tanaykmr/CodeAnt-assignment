@@ -9,11 +9,8 @@ export default function MainApp() {
   const value = 33;
   return (
     <div className="h-sm flex h-full flex-col divide-y divide-gray-300 rounded-lg border bg-white">
-      {/* Header Section with Search */}
       <div className="space-y-4 p-4">
-        {/* Title and Actions */}
         <div className="flex items-center justify-between">
-          {/* Title and Count */}
           <div>
             <h2 className="text-3xl font-bold text-[#181D27]">Repositories</h2>
             <span className="text-sm text-[#414651]">
@@ -59,11 +56,11 @@ export default function MainApp() {
       </div>
 
       {/* Repository List */}
-      <div className="divide-y divide-gray-300 overflow-y-auto">
+      <div className="snap-y divide-y divide-gray-300 overflow-y-auto">
         {repoList.map((repo) => (
           <div
             key={repo.name}
-            className="flex items-center pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
+            className="flex snap-end items-center pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
           >
             <div>
               <div className="flex items-center gap-3">
@@ -95,7 +92,8 @@ export default function MainApp() {
                   <span className="ml-1 inline-block h-2 w-2 rounded-full bg-blue-500"></span>
                 </span>
                 <span className="flex items-center gap-2 text-sm text-[#414651]">
-                  <img src={size} className="h-4 w-4" /> {repo.size}
+                  <img src={size} className="h-4 w-4 text-orange-500" />
+                  {repo.size}
                 </span>
                 <span className="text-sm text-[#414651]">
                   Updated {repo.updatedAt}
