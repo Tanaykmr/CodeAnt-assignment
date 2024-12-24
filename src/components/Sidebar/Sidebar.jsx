@@ -10,6 +10,7 @@ import settings from '../../assets/settings.svg';
 
 export default function Sidebar() {
   return (
+    // todo: make each button raise a bit on hover
     <>
       <img src={nameLogo} className="mb-4" />
       {/* the below div contains all the name and buttons */}
