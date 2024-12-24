@@ -14,7 +14,7 @@ export default function Sidebar() {
   return (
     // todo: make each button raise a bit on hover
     <>
-      <img src={nameLogo} className="mb-4" onClick={() => navigate("/login")}/>
+      <img src={nameLogo} className="mb-4" onClick={() => navigate('/login')} />
       {/* the below div contains all the name and buttons */}
       <div className="flex h-full flex-col">
         {/* Top group that stays together */}
