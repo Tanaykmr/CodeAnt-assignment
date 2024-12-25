@@ -18,7 +18,7 @@ export default function MainApp() {
           </div>
 
           <div className="mt-3 flex gap-3">
-            <button className="group flex min-h-[44px] touch-manipulation items-center gap-2 rounded-lg border bg-white px-4 py-2 shadow-md transition-all duration-200 active:translate-y-0.5 active:shadow-sm [@media(hover:hover)]:hover:-translate-y-0.5 [@media(hover:hover)]:hover:shadow-lg">
+            <button className="group flex min-h-[44px] touch-manipulation items-center gap-2 rounded-lg border bg-white px-4 py-2 shadow-md transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0.5 active:shadow-sm">
               <img
                 src={refresh}
                 className="h-4 w-4 transition-transform duration-300 [@media(hover:hover)]:group-hover:rotate-180"
@@ -47,7 +47,6 @@ export default function MainApp() {
             className="w-full rounded-lg border py-2 pl-10 pr-3 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Search repositories..."
           />
-          {/* </div> */}
         </div>
       </div>
 
