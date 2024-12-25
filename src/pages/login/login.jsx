@@ -5,7 +5,7 @@ import LoginSection from '../../components/loginSection/LoginSection';
 export default function Login() {
   return (
     <div className="flex h-screen">
-      <div className="hidden lg:relative lg:flex lg:flex-1 lg:items-center lg:justify-center lg:border-r-2">
+      <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-center lg:border-r-2">
         <HeroSection />
         <div className="absolute bottom-4 left-4 -z-10">
           {' '}

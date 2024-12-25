@@ -44,11 +44,11 @@ export default function MainApp() {
         </div>
       </div>
 
-      <div className="snap-y divide-y divide-gray-300 overflow-y-auto">
+      <div className="divide-y divide-gray-300 overflow-y-auto">
         {repoList.map((repo) => (
           <div
             key={repo.name}
-            className="flex snap-end items-center overflow-auto pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
+            className="flex items-center overflow-auto pb-4 pl-4 transition-colors duration-300 ease-in-out hover:bg-[#f5f5f5]"
           >
             <RepoCard {...repo} />
           </div>
