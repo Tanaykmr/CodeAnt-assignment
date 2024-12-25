@@ -12,129 +12,95 @@ import logout from '../../assets/logout.svg';
 import nameLogo from '../../assets/name_logo.svg';
 import settings from '../../assets/settings.svg';
 
-export default function Navbar() {
+export default function Header() {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const onClickMenu = () => setIsMenuOpen(!isMenuOpen);
-
   return (
-    <div className="lg:hidden">
-      <div className="sticky top-0 z-20 flex items-center justify-between bg-white p-4">
-        <img src={nameLogo} onClick={() => navigate('/login')} alt="logo" />
-        {isMenuOpen ? (
-          <IoMdClose className="h-6 w-6" onClick={onClickMenu} />
-        ) : (
-          <RxHamburgerMenu className="h-6 w-6" onClick={onClickMenu} />
-        )}
-      </div>
-
-      {/* Overlay */}
+    <div id="header" className="fixed w-full lg:hidden">
       <div
-        className={`fixed inset-0 z-10 bg-white transition-opacity duration-300 ${
-          isMenuOpen ? 'opacity-50' : 'pointer-events-none opacity-0'
-        }`}
-        onClick={onClickMenu}
-      />
-
-      {/* Menu */}
-      <div
-        className={`fixed left-0 top-[60px] z-10 w-full bg-white transition-transform duration-300 ${
-          isMenuOpen
-            ? 'pointer-events-auto visible translate-y-0'
-            : 'pointer-events-none invisible -translate-y-full'
-        }`}
+        className={`flex flex-row items-center justify-between ${!isMenuOpen ? 'border-b border-gray-300' : ''} bg-white p-4`}
       >
-        {/* <div className="flex flex-col gap-2 p-4">
-          <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-            <img
-              src={home}
-              className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-            />
-            <span>Repositories</span>
-          </button>
-
-          <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-            <img
-              src={home}
-              className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-            />
-            <span>Repositories</span>
-          </button>
-
-          <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-            <img
-              src={home}
-              className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-            />
-            <span>Reposiasdfasftories</span>
-          </button>
-        </div> */}
-        <div className="mt-6 flex h-full flex-col p-3">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between rounded-lg border px-3 py-2 shadow-md-all-sides">
+        <img src={nameLogo} onClick={() => navigate('/login')} alt="logo" />
+        <button onClick={onClickMenu}>
+          {isMenuOpen ? (
+            <IoMdClose className="h-6 w-6" />
+          ) : (
+            <RxHamburgerMenu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+      {isMenuOpen && (
+        <>
+          <div className="bg-white px-4 pb-2">
+            <div className="flex rounded-lg border px-3 py-2 shadow-md-all-sides">
               <span className="w-full truncate">UtkarshDhairyaPanwar</span>
               <GoChevronDown className="h-6 w-6" />
             </div>
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={home}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>Repositories</span>
-            </button>
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={code}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>AI Code Review </span>
-            </button>
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={cloud}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>Cloud Security</span>
-            </button>
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={docs}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>How to Use</span>
-            </button>
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={settings}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>Settings</span>
-            </button>
-          </div>
+            <div className="mt-4">
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={home}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Repositories</span>
+              </button>
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={code}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>AI Code Review </span>
+              </button>
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={cloud}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Cloud Security</span>
+              </button>
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={docs}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>How to Use</span>
+              </button>
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={settings}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Settings</span>
+              </button>
+            </div>
 
-          <div className="mt-auto">
-            {' '}
-            <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
-              <img
-                src={call}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>Support</span>
-            </button>{' '}
-            <button
-              className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner"
-              onClick={() => navigate('/login')}
-            >
-              <img
-                src={logout}
-                className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
-              />
-              <span>Logout</span>
-            </button>
+            <div className="mt-auto">
+              <button className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner">
+                <img
+                  src={call}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Support</span>
+              </button>
+              <button
+                className="duration-250 group flex w-full items-center gap-2 rounded-lg p-2 transition-all hover:-translate-y-1 hover:bg-[#1570EF] hover:text-white hover:shadow-inner"
+                onClick={() => navigate('/login')}
+              >
+                <img
+                  src={logout}
+                  className="h-6 w-6 group-hover:brightness-0 group-hover:invert"
+                />
+                <span>Logout</span>
+              </button>
+            </div>
           </div>
-        </div>
-      </div>
+          <div
+            className="h-screen w-full bg-[#6C6C6C] opacity-30"
+            onClick={onClickMenu}
+          ></div>
+        </>
+      )}
     </div>
   );
 }

@@ -12,7 +12,7 @@ import settings from '../../assets/settings.svg';
 export default function Sidebar() {
   const navigate = useNavigate();
   return (
-    <>
+    <div className="hidden p-4 lg:flex lg:flex-col">
       <img src={nameLogo} className="mb-4" onClick={() => navigate('/login')} />
       <div className="flex h-full flex-col">
         <div className="space-y-2">
@@ -78,6 +78,6 @@ export default function Sidebar() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
